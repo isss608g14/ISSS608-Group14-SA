@@ -1,0 +1,37 @@
+Package: oceanus.app
+Title: The Sound That Sailed
+Version: 0.0.0.9000
+Description: A Shiny application to explore the rise of Oceanus Folk artists 
+    and predict future rising stars based on genre alignment, collaboration, 
+    and model-based scoring.
+Encoding: UTF-8
+LazyData: true
+Imports:
+    shiny,
+    shinyWidgets,
+    shinythemes,
+    shinydashboard,
+    jsonlite,
+    igraph,
+    dplyr,
+    tidyr,
+    ggplot2,
+    DT,
+    emo,
+    magrittr,
+    echarts4r,
+    golem,
+    pkgload,
+    janitor,
+    stringr,
+    glmnet,
+    broom,
+    tibble,
+    lubridate,
+    plotly,
+    visNetwork,
+Remotes: 
+    hadley/emo
+RoxygenNote: 7.3.2
+Depends: 
+    R (>= 3.5)
