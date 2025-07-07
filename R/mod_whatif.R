@@ -233,7 +233,7 @@ mod_whatif_server <- function(id, nodes_tbl, edges_tbl) {
           legend = list(orientation = "h", x = 0.4, y = -0.2),
           paper_bgcolor = "#f9f7f1",
           plot_bgcolor = "#f9f7f1",
-          font = list(color = "#2f2f2f")
+          font = list(color = "#2f2f2f", family = "Playfair Display")
         )
     }
     

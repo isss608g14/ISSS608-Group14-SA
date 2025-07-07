@@ -228,15 +228,17 @@ mod_feature_server <- function(id) {
         ggplot2::labs(x = "Feature", y = "Artist", fill = "Score") +
         ggplot2::theme_minimal(base_size = 13) +
         ggplot2::theme(
-          axis.text.y = ggplot2::element_text(size = 10),
-          plot.background = ggplot2::element_rect(fill = "#f9f7f1"),
-          panel.background = ggplot2::element_rect(fill = "#f9f7f1"),
-          text = ggplot2::element_text(color = "#2f2f2f"),
-          axis.text = ggplot2::element_text(color = "#2f2f2f"),
-          legend.background = ggplot2::element_rect(fill = "#f9f7f1"),
-          legend.text = ggplot2::element_text(color = "#2f2f2f"),
-          legend.title = ggplot2::element_text(color = "#2f2f2f")
+          plot.background = ggplot2::element_rect(fill = "#f9f7f1", color = NA),
+          panel.background = ggplot2::element_rect(fill = "#f9f7f1", color = NA),
+          text = ggplot2::element_text(color = "#2f2f2f", family = "Playfair Display"),
+          axis.text = ggplot2::element_text(color = "#2f2f2f", family = "Playfair Display"),
+          axis.text.y = ggplot2::element_text(size = 10, color = "#2f2f2f", family = "Playfair Display"),
+          axis.title = ggplot2::element_text(color = "#2f2f2f", family = "Playfair Display"),
+          legend.background = ggplot2::element_rect(fill = "#f9f7f1", color = NA),
+          legend.text = ggplot2::element_text(color = "#2f2f2f", family = "Playfair Display"),
+          legend.title = ggplot2::element_text(color = "#2f2f2f", family = "Playfair Display")
         )
+      
       
       plotly::ggplotly(p, tooltip = c("y", "x", "fill"))
     })

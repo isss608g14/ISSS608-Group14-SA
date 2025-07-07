@@ -23,6 +23,7 @@ mod_artist_ui <- function(id) {
   ns <- NS(id)
   tagList(
     tags$head(
+      tags$title("⋆｡ﾟ🌊｡The Sound that Sailed"),
       tags$style(HTML("
         .light-theme {
           background-color: #f9f7f1;
@@ -217,23 +218,45 @@ mod_artist_server <- function(id) {
         hoverinfo = "text"
       ) %>%
         plotly::layout(
-          title = list(text = "Influence Trend Over Time", font = list(size = 24), x = 0),
-          xaxis = list(title = "", tickformat = "d", showgrid = FALSE),
-          yaxis = list(title = "Number of Influences", showgrid = TRUE,
-                       gridcolor = 'rgba(180,180,180,0.2)', zeroline = FALSE),
-          font = list(family = "Helvetica Neue", size = 14, color = "#0B2447"),
+          title = list(
+            text = "Influence Trend Over Time",
+            font = list(size = 24, family = "Playfair Display", color = "#2f2f2f"),
+            x = 0
+          ),
+          xaxis = list(
+            title = "",
+            tickformat = "d",
+            showgrid = FALSE,
+            color = "#2f2f2f"
+          ),
+          yaxis = list(
+            title = "Number of Influences",
+            showgrid = TRUE,
+            gridcolor = 'rgba(180,180,180,0.2)',
+            zeroline = FALSE,
+            color = "#2f2f2f"
+          ),
+          font = list(
+            family = "Playfair Display",
+            size = 14,
+            color = "#2f2f2f"
+          ),
           margin = list(t = 80, b = 60, l = 70, r = 30),
           hovermode = "x unified",
-          legend = list(orientation = "h", y = -0.2),
-          paper_bgcolor = "#f9f7f1",   
-          plot_bgcolor = "#f9f7f1",    
+          legend = list(
+            orientation = "h",
+            y = -0.2,
+            font = list(color = "#2f2f2f", family = "Playfair Display")
+          ),
+          paper_bgcolor = "#f9f7f1",
+          plot_bgcolor = "#f9f7f1",
           annotations = list(
             list(
               text = "Use the scrubber below to view the trend year by year",
               showarrow = FALSE,
               xref = "paper", yref = "paper",
               x = 0, y = -0.25,
-              font = list(size = 12, color = "#1F6E8C")
+              font = list(size = 12, color = "#2f2f2f", family = "Playfair Display")
             )
           )
         ) %>%

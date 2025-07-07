@@ -205,7 +205,7 @@ mod_network_server <- function(id) {
         visNetwork::visNodes(
           shapeProperties = list(useBorderWithImage = TRUE),
           font = list(
-            size = 18, color = "#2f2f2f", face = "Tahoma", strokeWidth = 2,
+            size = 18, color = "#2f2f2f", face = "Playfair Display", strokeWidth = 2,
             strokeColor = "#FFFFFF", vadjust = -10
           ),
           scaling = list(min = 10, max = 30),
